@@ -1,0 +1,11 @@
+jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        os: [python]
+        version: [3.8, 3.9, 3.10]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.version }}
