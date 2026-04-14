@@ -34,20 +34,7 @@ jobs:
       - name: Run tests
         run: pytest tests/
 
-  name: Security Scan with Trivy
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-permissions:
-  contents: read
-  security-events: write
-
-jobs:
-  trivy-scan:
+    trivy-scan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
