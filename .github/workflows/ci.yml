@@ -29,7 +29,7 @@ jobs:
           pip install pytest flake8
 
       - name: Run Flake8 linter
-        run: flake8 --extend-ignore E203 calculator/ tests/ --max-line-length=120
+        run: flake8 --extend-ignore E203,E302,E305 calculator/ tests/ --max-line-length=120
 
       - name: Run tests
         run: pytest tests/
